@@ -18,6 +18,7 @@
   CALL delete_partition('history');
 ```
 ## Пример создания таблицы с партициями
+
 ```sql
   CREATE TABLE history (
   itemid bigint(20) unsigned NOT NULL,
