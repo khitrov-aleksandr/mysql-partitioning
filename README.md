@@ -20,12 +20,12 @@
 ## Пример создания таблицы с партициями
 ```sql
   CREATE TABLE history (
-  itemid bigint(20) unsigned NOT NULL,
-  clock int(11) NOT NULL DEFAULT '0',
-  value double(16,4) NOT NULL DEFAULT '0.0000',
-  ns int(11) NOT NULL DEFAULT '0',
-  KEY history_1 (itemid,clock)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
-PARTITION BY RANGE (clock)
-(PARTITION p1572296400 VALUES LESS THAN (1572296400));
+    itemid bigint(20) unsigned NOT NULL,
+    clock int(11) NOT NULL DEFAULT '0',
+    value double(16,4) NOT NULL DEFAULT '0.0000',
+    ns int(11) NOT NULL DEFAULT '0',
+    KEY history_1 (itemid,clock)
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+  PARTITION BY RANGE (clock)
+  (PARTITION p1572296400 VALUES LESS THAN (1572296400));
 ```
