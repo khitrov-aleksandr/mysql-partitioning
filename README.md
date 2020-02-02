@@ -13,11 +13,10 @@
 ## Вызов хранимых процедур
 ```sql
   CALL create_partition('history');
-```sql
 ```
+```sql
   CALL delete_partition('history');
 ```
-
 ## Пример создания таблицы с партициями
 ```sql
   CREATE TABLE history (
